@@ -1,8 +1,8 @@
-// class Weather {
+"use strict";
 
-//     isStormy = function() {
-//         const options = [true, false, false, false]
-//         return options[Math.floor(Math.random() * options.length)]
-//     }
-
-// }
+function Weather() {
+  this._CHANCE_OF_STORMY = 0.5;
+}
+Weather.prototype.isStormy = function() {
+  return Math.random() > this._CHANCE_OF_STORMY;
+};

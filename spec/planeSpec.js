@@ -1,9 +1,7 @@
-"use strict";
-
 describe("Plane", function() {
   let plane;
   let airport;
-  beforeEach(function() {
+  beforeEach(() => {
     plane = new Plane();
     airport = jasmine.createSpyObj("airport", [
       "clearForLanding",
