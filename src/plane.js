@@ -1,9 +1,11 @@
 "use strict";
 
-class Plane {
-  constructor() {}
+function Plane() {}
 
-  land(airport) {
-    airport.clearForLanding(this);
-  }
-}
+Plane.prototype.land = function(airport) {
+  airport.clearForLanding(this);
+  this._location = airport;
+};
+Plane.prototype.takeoff = function() {
+  this._location.clearForTakeOff();
+};
